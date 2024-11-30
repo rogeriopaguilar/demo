@@ -22,6 +22,12 @@ public class City implements Serializable {
     protected City() {
     }
 
+    public City(Long id, String name, String state) {
+        this.id = id;
+        this.name = name;
+        this.state = state;
+    }
+
     public City(String name, String state) {
         this.name = name;
         this.state = state;

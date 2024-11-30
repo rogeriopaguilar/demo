@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 public class CityService {
@@ -43,4 +44,7 @@ public class CityService {
         this.cityRepository.deleteById(id);
     }
 
+    public Optional<City> findById(Long id) {
+        return cityRepository.findById(id);
+    }
 }
